@@ -1,5 +1,4 @@
 import { createGlobalStyle } from 'styled-components';
-import { StyleConstants } from './StyleConstants';
 /* istanbul ignore next */
 export const GlobalStyle = createGlobalStyle`
   html,
@@ -11,12 +10,15 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    padding-top: ${StyleConstants.NAV_BAR_HEIGHT};
-    background-color: ${p => p.theme.background};
+    background-color: ${p => p.theme.palette.background.default};
   }
 
   body.fontLoaded {
     font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6, p, span {
+    color: ${p => p.theme.palette.text.primary};
   }
   
   p,
