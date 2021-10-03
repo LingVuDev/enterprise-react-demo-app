@@ -34,8 +34,16 @@ export default function ButtonAppBar() {
               Home
             </Link>
           </Button>
-          <Button color="inherit">About</Button>
-          <Button color="inherit">Dashboard</Button>
+          <Button color="inherit">
+            <Link className={classNames('link')} to="/about">
+              About
+            </Link>
+          </Button>
+          <Button color="inherit">
+            <Link className={classNames('link')} to="/dashboard">
+              Dashboard
+            </Link>
+          </Button>
           <Button color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
