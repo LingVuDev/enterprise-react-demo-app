@@ -24,11 +24,11 @@
     "@types/webpack": "5.28.0",
     "@types/webpack-env": "1.16.2",
     "@types/yup": "0.29.13",
+    "apexcharts": "3.28.3",
     "axios": "0.21.4",
     "chalk": "4.1.1",
     "classnames": "2.3.1",
     "clsx": "1.1.1",
-    "concurrently": "6.2.1",
     "cross-env": "7.0.3",
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-prettier": "3.4.0",
@@ -42,13 +42,12 @@
     "inquirer": "7.3.3",
     "inquirer-directory": "2.2.0",
     "jest-styled-components": "7.0.4",
-    "json-server": "0.16.3",
-    "json-server-auth": "2.1.0",
     "lint-staged": "10.3.0",
     "node-plop": "0.26.2",
     "plop": "2.7.4",
     "prettier": "2.3.2",
     "react": "17.0.2",
+    "react-apexcharts": "1.3.9",
     "react-app-polyfill": "2.0.0",
     "react-dom": "17.0.2",
     "react-helmet-async": "1.0.9",
@@ -80,6 +79,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "backend": "json-server --watch db.json --port 5000 --delay=1000",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "test:generators": "ts-node --project=./internals/ts-node.tsconfig.json ./internals/testing/generators/test-generators.ts",
@@ -138,5 +138,11 @@
         "statements": 90
       }
     }
+  },
+  "devDependencies": {
+    "concurrently": "6.3.0",
+    "cypress": "8.5.0",
+    "json-server": "0.16.3",
+    "json-server-auth": "2.1.0"
   }
 }

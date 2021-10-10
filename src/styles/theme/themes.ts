@@ -3,12 +3,20 @@ import { createTheme } from '@mui/material/styles';
 const lightTheme = createTheme({
   palette: {
     mode: 'light',
+    text: {
+      primary: 'rgba(58,52,51,1)',
+      secondary: 'rgba(58,52,51,0.7)',
+    },
   },
 });
 
 const darkTheme = createTheme({
   palette: {
     mode: 'dark',
+    text: {
+      primary: 'rgba(241,233,231,1)',
+      secondary: 'rgba(241,233,231,0.6)',
+    },
   },
 });
 
