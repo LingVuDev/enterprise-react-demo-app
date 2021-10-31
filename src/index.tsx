@@ -45,9 +45,7 @@ ReactDOM.render(
   <Provider store={store}>
     <ThemeProvider>
       <HelmetProvider>
-        <React.StrictMode>
-          <App />
-        </React.StrictMode>
+        <App />
       </HelmetProvider>
     </ThemeProvider>
   </Provider>,

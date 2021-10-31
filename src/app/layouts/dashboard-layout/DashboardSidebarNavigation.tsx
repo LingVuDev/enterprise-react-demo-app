@@ -12,6 +12,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import classNames from 'classnames';
 import { useRouteMatch } from 'react-router-dom';
+import { PieChart as PieChartIcon } from 'react-feather';
 
 const drawerWidth = '240px';
 
@@ -74,6 +75,16 @@ const DashboardSidebarNavigation = () => {
           </Link>
         </Toolbar>
         <List>
+          <Link to={url}>
+            <ListItem disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                  <PieChartIcon />
+                </ListItemIcon>
+                <ListItemText primary="Dashboard" />
+              </ListItemButton>
+            </ListItem>
+          </Link>
           <Link to={`${url}/settings-and-privacy`}>
             <ListItem disablePadding>
               <ListItemButton>

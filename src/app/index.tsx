@@ -14,8 +14,7 @@ import { GlobalStyle } from '../styles/global-styles';
 
 import { useTranslation } from 'react-i18next';
 import Routes from './Routes';
-import NavBar from './components/NavBar';
-import Container from '@mui/material/Container';
+import MainLayout from './layouts/dashboard-layout/main-layout/MainLayout';
 
 export function App() {
   const { i18n } = useTranslation();
@@ -28,10 +27,9 @@ export function App() {
       >
         <meta name="description" content="A React Boilerplate application" />
       </Helmet>
-      <NavBar />
-      <Container>
+      <MainLayout>
         <Routes />
-      </Container>
+      </MainLayout>
 
       <GlobalStyle />
     </BrowserRouter>

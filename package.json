@@ -50,6 +50,7 @@
     "react-apexcharts": "1.3.9",
     "react-app-polyfill": "2.0.0",
     "react-dom": "17.0.2",
+    "react-feather": "2.0.9",
     "react-helmet-async": "1.0.9",
     "react-i18next": "11.11.1",
     "react-redux": "7.2.4",
@@ -77,9 +78,10 @@
     "@mui/styled-engine": "npm:@mui/styled-engine-sc@latest"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "concurrently \"yarn start:fe\" \"yarn start:json-server\"",
+    "start:fe": "react-scripts start",
+    "start:json-server": "json-server --watch db.json --port 5000 --delay=1000",
     "build": "react-scripts build",
-    "backend": "json-server --watch db.json --port 5000 --delay=1000",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "test:generators": "ts-node --project=./internals/ts-node.tsconfig.json ./internals/testing/generators/test-generators.ts",
