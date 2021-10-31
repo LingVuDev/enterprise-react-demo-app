@@ -35,7 +35,7 @@
     "eslint-plugin-react-hooks": "4.2.0",
     "fontfaceobserver": "2.1.0",
     "formik": "2.2.9",
-    "husky": "7.0.0",
+    "husky": "7.0.4",
     "i18next": "20.3.2",
     "i18next-browser-languagedetector": "6.1.2",
     "i18next-scanner": "3.0.0",
@@ -94,7 +94,8 @@
     "generate": "cross-env TS_NODE_PROJECT='./internals/ts-node.tsconfig.json' plop --plopfile internals/generators/plopfile.ts",
     "cleanAndSetup": "ts-node --project=./internals/ts-node.tsconfig.json ./internals/scripts/clean.ts",
     "prettify": "prettier --write",
-    "extract-messages": "i18next-scanner --config=internals/extractMessages/i18next-scanner.config.js"
+    "extract-messages": "i18next-scanner --config=internals/extractMessages/i18next-scanner.config.js",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -116,7 +117,8 @@
     "node": ">=14.0.0"
   },
   "lint-staged": {
-    "*.{ts,tsx,js,jsx}": [
+    "src/*.{ts,tsx,js,jsx}": [
+      "prettier --write",
       "yarn run eslint --fix"
     ],
     "*.{md,json}": [
@@ -142,6 +144,7 @@
     }
   },
   "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "3.0.0",
     "concurrently": "6.3.0",
     "cypress": "8.5.0",
     "json-server": "0.16.3",
