@@ -1,18 +1,17 @@
-import React from 'react';
+import ExitToAppIcon from '@mui/icons-material/ExitToApp';
+import SettingsIcon from '@mui/icons-material/Settings';
 import Drawer from '@mui/material/Drawer';
-import Toolbar from '@mui/material/Toolbar';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import SettingsIcon from '@mui/icons-material/Settings';
-import ExitToAppIcon from '@mui/icons-material/ExitToApp';
-import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import Toolbar from '@mui/material/Toolbar';
 import classNames from 'classnames';
-import { useRouteMatch } from 'react-router-dom';
 import { PieChart as PieChartIcon } from 'react-feather';
+import { Link } from 'react-router-dom';
+import { useRouteMatch } from 'react-router-dom';
+import styled from 'styled-components';
 
 const drawerWidth = '240px';
 

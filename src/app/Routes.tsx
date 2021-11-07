@@ -1,5 +1,5 @@
-import DashboardLayout from './layouts/dashboard-layout';
-import MainLayout from './layouts/main-layout';
+import DashboardLayout from './layouts/DashboardLayout';
+import MainLayout from './layouts/MainLayout';
 import HomePage from './pages/HomePage';
 import NotFoundPage from './pages/NotFoundPage';
 import SettingsAndPrivacy from './views/dashboard/SettingsAndPrivacy';
@@ -34,6 +34,21 @@ const Routes = () => {
                     exact
                     path={path + '/settings-and-privacy'}
                     component={SettingsAndPrivacy}
+                  />
+                  <Route
+                    exact
+                    path={path + '/list-products'}
+                    component={lazy(
+                      () => import('./views/dashboard/product/ProductListView'),
+                    )}
+                  />
+                  <Route
+                    exact
+                    path={path + '/create-product'}
+                    component={lazy(
+                      () =>
+                        import('./views/dashboard/product/ProductCreateView'),
+                    )}
                   />
                 </Switch>
               </DashboardLayout>
