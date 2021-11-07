@@ -1,12 +1,12 @@
-import React from 'react';
-import Grid from '@mui/material/Grid';
 import DashboardSidebarNavigation from './DashboardSidebarNavigation';
+import Grid from '@mui/material/Grid';
+import React from 'react';
 
-interface DashboardProps {
+interface DashboardLayoutProps {
   children: React.ReactNode;
 }
 
-const Dashboard = ({ children }: DashboardProps) => {
+const DashboardLayout = ({ children }: DashboardLayoutProps) => {
   return (
     <Grid
       container
@@ -14,9 +14,10 @@ const Dashboard = ({ children }: DashboardProps) => {
       justifyContent="flex-start"
       alignItems="flex-start"
     >
-      <DashboardSidebarNavigation /> {children}
+      <DashboardSidebarNavigation />
+      {children}
     </Grid>
   );
 };
 
-export default Dashboard;
+export default DashboardLayout;
